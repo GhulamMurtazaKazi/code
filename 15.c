@@ -31,7 +31,7 @@ int main () {
 		return 0;
 }
 
-ALTERNATIVE WAY:
+ALTERNATE METHOD:
 #include<stdio.h>
 int main () {
 	int number,count=1,digits[10000],i=0;
