@@ -30,6 +30,39 @@ int main () {
 			
 		return 0;
 }
+
+ALTERNATIVE WAY:
+#include<stdio.h>
+int main () {
+	int number,count=1,digits[10000],i=0;
+	printf("enter a number\n");
+	scanf("%d",&number);
+	i=number;
+	while (number>0) {
+		number=number/10;
+		if (number>0) {
+		count++;
+	}
+	}
+	number=i;
+	i=0;
+	while (number>0) {
+		digits[i]=number%10;
+		number=number/10;
+		++i;
+	} 
+	i=0;
+	while (i<count/2) {
+		if (digits[i]!=digits[(count-1)-i]) {
+			printf("not a palindrome number");
+			return 0;
+			
+		} 
+		++i;
+		}
+		printf("this is a palindrome number");
+		return 0;	
+}
 /*A third way this question can be done is by declaring two arrays and first storing the complete number in one array 
 and storing the reverse of the number in another array.Then simply comparing both the arrays index  by  index 
 starting from 0 to count-1*/
